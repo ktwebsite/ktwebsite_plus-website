@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+}
+
+.page-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow-x: scroll;
+}
+
+.page-inside{
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-title{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-block-start: auto;
+    margin-block-end: auto;
+}
+
+.page-text-title{
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.page-button{
+    background-color: #131313;
+    border-radius: 25px;
+    width: 200px;
+    padding: 10px 20px;
+    color: white;
+    transition: ease .2s;
+}
+
+.page-button:hover{
+    background-color: #ffc300;
+    color: black;
+}

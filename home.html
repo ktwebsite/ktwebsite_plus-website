@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1, width=device-width">
+    <meta name="description" content="KTWebsite">
+    <title>Home</title>
+    <link rel="shortcut icon" href="./img/ktwebsite_plus.JPG" type="image/x-icon">
+    <noscript>
+        You need to enable JavaScript to display this page!
+    </noscript>
+    <link rel="stylesheet" type="text/css" href="./css/all.css">
+    <link rel="stylesheet" type="text/css" href="./css/home.css">
+</head>
+<body id="body">
+    <div id="page">
+            <div class="black-screen-alpha" id="black-screen-alpha" style="display: none;">
+                <div class="Selection-box-responsive" id="selection-box-responsive" style="display: none;">
+                    <div class="header-selection">
+                        <button id="close-btn">
+                            <svg viewBox="0 0 24 24" width="30" height="30">
+                                <path d="M12.7,12l6.6,6.6l-0.7,0.7L12,12.7l-6.6,6.6l-0.7-0.7l6.6-6.6L4.6,5.4l0.7-0.7l6.6,6.6l6.6-6.6l0.7,0.7L12.7,12z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="selection-box-selection">
+                        <div class="inside-selection" onclick="window.location='home.html';">
+                            <p>Home</p>
+                        </div>
+                        <div class="inside-selection" onclick="window.location='ktmuzik.html';">
+                            <p>KTMuZik</p>
+                        </div>
+                        <div class="inside-selection" onclick="window.location='ktmuzik-plus.html';">
+                            <p>KTMuZik+</p>
+                        </div>
+                        <div class="inside-selection" onclick="window.location='ktfilm.html';">
+                            <p>KTFilm</p>
+                        </div>
+                        <div class="inside-selection" onclick="window.location='chill-music.html';">
+                            <p>chill music</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="Header" id="header-box">
+                <button class="bar" id="Selection-block" style="background-color: transparent;">
+                    <svg viewBox="0 0 24 24" width="45" height="45">
+                        <path d="M21,6H3V5h18V6z M21,11H3v1h18V11z M21,17H3v1h18V17z"></path>
+                    </svg>
+                </button>
+                <img height="100" width="100" src="./img/ktwebsite_plus2.PNG" alt="KTWebsite+">
+                <div class="Selection">
+                    <div id="inside_selection">
+                        <a class="a" href="./home.html">Home</a>
+                    </div>
+                    <div id="inside_selection">
+                        <a class="a" href="./ktmuzik.html">KTMuZik</a>
+                    </div>
+                    <div id="inside_selection">
+                        <a class="a" href="./ktmuzik-plus.html">KTMuZik+</a>
+                    </div>
+                    <div id="inside_selection">
+                        <a class="a" href="./ktfilm.html">KTFilm</a>
+                    </div>
+                    <div id="inside_selection" class="block">
+                        <a class="a" href="./chill-music.html">chill music</a>
+                    </div>
+                </div>
+                <div class="search">
+                    <div class="search-box" id="search-box" style="display: none;">
+                        <form action="./php/livesearch.php" class="form" method="get">
+                            <div class="input-search">
+                                <input type="text" placeholder="Search..." style="font-family: Whitney; outline: none;"name="search" id="search_input_box" required>
+                                <svg viewBox="0 0 24 24" width="20" height="20" id="close_btn" style="cursor: pointer;">
+                                    <path d="M12.7,12l6.6,6.6l-0.7,0.7L12,12.7l-6.6,6.6l-0.7-0.7l6.6-6.6L4.6,5.4l0.7-0.7l6.6,6.6l6.6-6.6l0.7,0.7L12.7,12z"></path>
+                                </svg>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="search-icon" id="search">
+                        <button style="background-color: transparent;">
+                            <svg viewBox="0 0 24 24" width="40" height="40">
+                                <path d="M20.87,20.17l-5.59-5.59C16.35,13.35,17,11.75,17,10c0-3.87-3.13-7-7-7s-7,3.13-7,7s3.13,7,7,7c1.75,0,3.35-0.65,4.58-1.71 l5.59,5.59L20.87,20.17z M10,16c-3.31,0-6-2.69-6-6s2.69-6,6-6s6,2.69,6,6S13.31,16,10,16z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <div class="content content-background" id="content">
+                <!-- Content goes here -->
+                <div class="introduce">
+                    <p id="title">Welcome to KTWebsite+</p>
+                    <p id="description">Viper than KTWebsite.</p>
+                    <a href="../home.html">
+                        <button class="button_goback">Go back to KTWebsite</button>
+                    </a>
+                </div>
+                <div class="ktmuzik">
+                    <div>
+                        <p id="title">KTMuZik</p>
+                        <p id="description">Enjoy thousands of non-famous music now.</p>
+                        <a href="./ktmuzik.html">
+                            <button class="button_tryit">Try it now</button>
+                        </a>
+                    </div>
+                    <img class="img" alt="KTMuZik" src="../img/ktmuzik.JPG" height="150" width="150">
+                </div>
+                <div class="ktmuzik-plus">
+                    <div>
+                        <p id="title">KTMuZik+</p>
+                        <p id="description">Enjoy thousands of famous music now.</p>
+                        <a href="./ktmuzik-plus.html">
+                            <button class="button_tryit">Try it now</button>
+                        </a>
+                    </div>
+                    <img class="img" alt="KTMuZik" src="../img/ktmuzik_plus.JPG" height="150" width="150">
+                </div>
+                <div class="ktfilm">
+                    <div>
+                        <p id="title">KTFilm</p>
+                        <p id="description">Enjoy thousands of movies by Khang Tèo.</p>
+                        <a href="./ktfilm.html">
+                            <button class="button_tryit">Try it now</button>
+                        </a>
+                    </div>
+                    <img class="img" alt="KTFilm" src="../img/ktfilm.JPG" height="150" width="150">
+                </div>
+                <div class="chill-music">
+                    <div>
+                        <p id="title">chill music</p>
+                        <p id="description">Stay back and start chill with some chill music.</p>
+                        <a href="./chill-music.html">
+                            <button class="button_tryit">Try it now</button>
+                        </a>
+                    </div>
+                    <img class="img" alt="KTFilm" src="../img/chill_music.JPG" height="150" width="150">
+                </div>
+                <!-- end -->
+                <!-- Footer -->
+                <div class="footer">
+                    <div class="footer-inside">
+                        <div class="footer1">
+                            <img src="./img/ktwebsite_plus2.PNG" width="120" height="120" style="margin-right: 20px;" alt="KTWebsite+">
+                            <div class="footer2">
+                                <h2 style="font-family: Whitney Bold;">KTWebsite+</h2>
+                                <p>Viper than KTWebsite.</p>
+                            </div>
+                        </div>
+                        <div class="footer3">
+                            <div class="footer3-inside">
+                                <h2 style="font-family: Whitney Bold;">Partners</h2>
+                                <ul>
+                                    <li class="list">median</li>
+                                    <li class="list">DevJS</li>
+                                    <li class="list">DevHTML</li>
+                                    <li class="list">DevPy</li>
+                                    <li class="list">Cyprus</li>
+                                </ul>
+                            </div>
+                            <div class="footer3-inside">
+                                <h2 style="font-family: Whitney Bold;">Legal</h2>
+                                <ul>
+                                    <li class="list2">
+                                        <a href=".././quadruple-verse/ktwebsite/legals/terms-and-conditions.html">Terms and Conditions</a>
+                                    </li>
+                                    <li class="list2">MuZik Community Guidelines</li>
+                                    <li class="list2">Film Community Guidelines</li>
+                                    <li class="list2">
+                                        <a href=".././quadruple-verse/ktwebsite/legals/privacy-policy.html">Privacy Policy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer3-inside">
+                                <h2 style="font-family: Whitney Bold;">Others</h2>
+                                <ul>
+                                    <li class="list2">Settings</li>
+                                    <li class="list2">FAQ</li>
+                                    <li class="list2">Contact Us</li>
+                                    <li class="list2">Members Card</li>
+                                    <li class="list2">Developer</li>
+                                </ul>
+                            </div>
+                            <div class="footer4">
+                                <div class="footer3-inside">
+                                    <ul class="footer-socials">
+                                        <li class="social" id="response">
+                                            <a href="https://www.facebook.com/KTWebsite-101624502352257">Facebook</a>
+                                        </li>
+                                        <li class="social">
+                                            <a href="https://www.youtube.com/channel/UC5TlX61P6GCQST36YUj3EJw">YouTube</a>
+                                        </li>
+                                        <li class="social">
+                                            <a href="https://www.instagram.com/ktwebsite/">Instagram</a>
+                                        </li>
+                                        <li class="social">
+                                            <a href="https://www.tiktok.com/@ktwebsite">TikTok</a>
+                                        </li>
+                                        <li class="social">
+                                            <a href="https://twitter.com/ktwebsite2021">Twitter</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="footer-copyright">
+                                    <span id="response">Design by KTWebsite © 2022 / Version </span><span style="font-family: Whitney Bold; margin: 0;">Cyprus X</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script>
+
+        var KTWebsite = {"totalObject":"2","date":"2019-10-20","lang":"en-US, vi-VN","author":"Khang Teo","url":"https:\/\/ktwebsite.glitch.me\/", thisObject: {
+            "name": "KTWebsite+",
+            "version": "Cyprus X",
+            "description": "Viper than KTWebsite.",
+        }};
+
+    </script>
+    <script type="text/javascript" src="./js/all.js"></script>
+    <script type="text/javascript" src="/js/all.js"></script>
+    <script type="text/javascript" src="./js/search.js"></script>
+</body>
+</html>

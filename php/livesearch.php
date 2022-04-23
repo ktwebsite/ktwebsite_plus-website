@@ -1,0 +1,3 @@
+<?php
+    shm_detach()
+?>

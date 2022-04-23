@@ -1,0 +1,60 @@
+.content-background{
+    background:linear-gradient(80deg,rgb(0, 0, 0),rgb(0, 39, 61));
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.introduce{
+    padding: 50px;
+    color: white;
+}
+
+p#title{
+    font-size: 50px;
+    font-family: "Whitney Bold";
+}
+
+p#description{
+    margin-top: 15px;
+    font-size: 20px;
+    font-family: "Whitney";
+    margin-block-end: 20px;
+}
+
+.button_goback{
+    background-color: transparent;
+    border: 3px solid white;
+    padding: 10px 20px;
+    color: white;
+    font-family: "Whitney";
+    transition: ease .2s;
+}
+
+.button_goback:hover{
+    background-color: white;
+    color: black;
+}
+
+.ktmuzik,.ktmuzik-plus,.ktfilm,.chill-music{
+    font-family: "Whitney";
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    color: white;
+    justify-content: space-between;
+}
+
+.button_tryit{
+    background-color: transparent;
+    border: 3px solid white;
+    padding: 10px 20px;
+    color: white;
+    font-family: "Whitney";
+    width: 110px;
+    transition: ease .2s;
+}
+
+.button_tryit:hover{
+    background-color: white;
+    color: black;
+}
