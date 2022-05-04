@@ -58,3 +58,16 @@ p#description{
     background-color: white;
     color: black;
 }
+
+@media screen and (max-width: 800px){
+    .introduce, .ktmuzik, .ktmuzik-plus, .ktfilm, .chill-music{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ktmuzik > div, .ktmuzik-plus > div, .ktfilm > div, .chill-music > div{
+        text-align: center;
+        align-items: center;
+        margin-bottom: 35px;
+    }
+}

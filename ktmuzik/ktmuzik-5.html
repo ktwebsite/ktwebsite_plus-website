@@ -181,7 +181,7 @@
                                 <img class="ktmuzik-img" width=120 height=120 src="/img/ktmuzik.JPG" alt="KTMuZik">
                                 <div class="information-box2">
                                     <div class="text-box-informations">
-                                        <p class="p">KTMuZik 1</p>
+                                        <p class="p">KTMuZik 5</p>
                                         <div class="item-box">
                                             <svg viewBox="0 0 24 24" width="15" height="15" id="loop" style="display: none;">
                                                 <path d="M7 7H17V10L21 6L17 2V5H5V11H7V7ZM17 17H7V14L3 18L7 22V19H19V13H17V17Z"></path>
@@ -365,7 +365,7 @@
 <script type="text/javascript">
     
 
-    $.getJSON("https://www.googleapis.com/youtube/v3/videos?id=P3CRrLoTaeU&key=AIzaSyBSP9iOT6sxfPYE7zs5jrrdI3rkdSn7dO4&part=snippet,contentDetails", function(publish_date){
+    $.getJSON("https://www.googleapis.com/youtube/v3/videos?id=fTduX95B684&key=AIzaSyBSP9iOT6sxfPYE7zs5jrrdI3rkdSn7dO4&part=snippet,contentDetails", function(publish_date){
     const date = publish_date.items[0].snippet.publishedAt;
     const made_in = document.getElementById('made-in');
     made_in.innerHTML = date.slice(0, 10);
@@ -376,16 +376,16 @@
     });
 
     const total_views = document.getElementById('total-views');
-    $.getJSON('https://www.googleapis.com/youtube/v3/videos?part=statistics&id=P3CRrLoTaeU&key=AIzaSyBSP9iOT6sxfPYE7zs5jrrdI3rkdSn7dO4', function(data) {
+    $.getJSON('https://www.googleapis.com/youtube/v3/videos?part=statistics&id=fTduX95B684&key=AIzaSyBSP9iOT6sxfPYE7zs5jrrdI3rkdSn7dO4', function(data) {
     const views = data.items[0].statistics.viewCount;
         total_views.innerText = views;
     });
 
-    var audio = new Audio('https://cdn.glitch.global/84a5dd4b-f041-4091-88bc-5797c8a8129b/KTMuZik%201.mp3?v=1648969637618');
+    var audio = new Audio('https://cdn.glitch.global/84a5dd4b-f041-4091-88bc-5797c8a8129b/Daisy%20Bell%20-%20Harry%20Dacre%20(KTMuZik%205).mp3?v=1651637969852');
 </script>
 <script type="text/javascript" src="./js/ktmuzik.js"></script>
 <script>
-    $.getJSON('https://www.googleapis.com/youtube/v3/videos?part=statistics&id=P3CRrLoTaeU&key=AIzaSyBSP9iOT6sxfPYE7zs5jrrdI3rkdSn7dO4', function(data) {
+    $.getJSON('https://www.googleapis.com/youtube/v3/videos?part=statistics&id=fTduX95B684&key=AIzaSyBSP9iOT6sxfPYE7zs5jrrdI3rkdSn7dO4', function(data) {
         const like_count = data.items[0].statistics.likeCount;
         like_text.innerText = like_count;
     });

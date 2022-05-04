@@ -34,6 +34,8 @@ most_popular.onclick = () => {
     svg.classList.remove('svg-rotatein');
     svg.classList.add('svg-rotateout');
     svg.style.transform = 'rotate(360deg)';
+
+
 }
 
 all_music.onclick = () => {
@@ -50,16 +52,6 @@ all_music.onclick = () => {
 
 
 const number_views = document.getElementById('number-views');
-
-const choose_number_views = [
-    {
-        ktmuzik_1: `${number_views}`
-    }
-]
-
-function mostPopular() {
-    return Views(Math.max.apply(Math, choose_number_views.map(function(o) { return o.ktmuzik_1; })));
-}
 
 const play_pause_btn = document.getElementById('play-pause-btn');
 

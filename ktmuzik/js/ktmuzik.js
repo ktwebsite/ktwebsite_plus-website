@@ -16,7 +16,7 @@ var pause_btn = `
 <path d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z"></path>
 `
 
-play_pause_btn.onclick = () => {
+function playPauseBtnClick () {
 if (play_pause_btn.innerHTML == play_btn) {
     play_pause_btn.innerHTML = pause_btn;
     audio.pause();
@@ -25,6 +25,8 @@ if (play_pause_btn.innerHTML == play_btn) {
     audio.play();
 }
 }
+
+play_pause_btn.addEventListener("click", playPauseBtnClick);
 
 function audioSeek () {
     var seekto = audio.duration * (seekslider.value / 100);
@@ -50,6 +52,16 @@ function currentTime() {
     time_current.innerHTML = curmins + ":" + cursecs;
     time_duration.innerHTML = durmins + ":" + dursecs;
 }
+
+if(time_duration == "NaN:NaN") {
+    play_pause_btn.style.fill = 'rgb(156, 156, 156)';
+    console.error("There was an error with the audio.");
+    notify_box.style.display = 'block';
+    notify_text_area.innerText = "There was an error with the audio.";
+    play_pause_btn.removeEventListener("click", playPauseBtnClick);
+}
+
+var notify_box = document.getElementById('notify-box');
 
 audio.addEventListener("timeupdate", currentTime);
 
@@ -287,7 +299,6 @@ document.addEventListener("keydown", event => {
     }
 });
 
-var notify_box = document.getElementById('notify-box');
 var notify_text_area = document.getElementById('notify-text-area');
 var svg_like_btn = document.getElementById('svg-like-btn');
 var like_text = document.getElementById('like-text');
@@ -322,7 +333,7 @@ svg_like_btn.onclick = () => {
         like_text.innerText = parseInt(like_text.innerText) + 1;
 
         if(notify_box.style.display == "none") {
-            notify_box.style.display = "block";
+            notify_box.style.display = "flex";
             notify_text_area.innerText = 'Saved to \'Liked Music\'.';
             setTimeout(() => {
                 notify_box.style.display = "none";
@@ -330,7 +341,7 @@ svg_like_btn.onclick = () => {
         }
     } else {
         if(notify_box.style.display == "none") {
-            notify_box.style.display = "block";
+            notify_box.style.display = "flex";
             notify_text_area.innerText = 'Removed from \'Liked Music\'.';
             setTimeout(() => {
                 notify_box.style.display = "none";
@@ -344,9 +355,8 @@ svg_like_btn.onclick = () => {
 svg_dislike_btn.onclick = () => {
     if(svg_dislike_btn.innerHTML != svg_dislike_btn_fill) {
         svg_dislike_btn.innerHTML = svg_dislike_btn_fill;
-        dislike_text.innerText = parseInt(dislike_text.innerText) + 1;
         if(notify_box.style.display == "none") {
-            notify_box.style.display = "block";
+            notify_box.style.display = "flex";
             notify_text_area.innerText = 'Dislike added.';
             setTimeout(() => {
                 notify_box.style.display = "none";
@@ -354,7 +364,6 @@ svg_dislike_btn.onclick = () => {
         }
     } else {
         svg_dislike_btn.innerHTML = svg_dislike_btn_html;
-        dislike_text.innerText = parseInt(dislike_text.innerText) - 1;
     }
 }
 
@@ -516,125 +525,19 @@ loop_box_responsive_btn.onclick = () => {
         volume_value_responsive.innerText = `${volume_range_responsive.value}%`;
     }
 
-// Responsive Page
-
-
-function Responsive (mq) {
-    if(mq.matches){
-        speed_2x.onclick = () => {
-            if(speed_panel_alert_box_responsive.style.display == 'none') {
-                speed_panel_box.style.display = 'none';
-                speed_panel_alert_box_responsive.style.display = 'flex';
-                audio.playbackRate = 2;
-                speed_value_responsive.innerText = speed_2x.innerText;
-                setTimeout(() => {
-                    speed_panel_alert_box_responsive.style.display = 'none';
-                }, 2000);
-            }
-        }
-        speed_1_half.onclick = () => {
-            if(speed_panel_alert_box_responsive.style.display == 'none') {
-                speed_panel_box.style.display = 'none';
-                speed_panel_alert_box_responsive.style.display = 'flex';
-                audio.playbackRate = 1.5;
-                speed_value_responsive.innerText = speed_1_half.innerText;
-                setTimeout(() => {
-                    speed_panel_alert_box_responsive.style.display = 'none';
-                }, 2000);
-            }
-        }
-        speed_1x.onclick = () => {
-            if(speed_panel_alert_box_responsive.style.display == 'none') {
-                speed_panel_box.style.display = 'none';
-                speed_panel_alert_box_responsive.style.display = 'flex';
-                audio.playbackRate = 1;
-                speed_value_responsive.innerText = speed_1x.innerText;
-                setTimeout(() => {
-                    speed_panel_alert_box_responsive.style.display = 'none';
-                }, 2000);
-            }
-        }
-        speed_zero_half.onclick = () => {
-            if(speed_panel_alert_box_responsive.style.display == 'none') {
-                speed_panel_box.style.display = 'none';
-                speed_panel_alert_box_responsive.style.display = 'flex';
-                audio.playbackRate = 0.5;
-                speed_value_responsive.innerText = speed_zero_half.innerText;
-                setTimeout(() => {
-                    speed_panel_alert_box_responsive.style.display = 'none';
-                }, 2000);
-            }
-        }
-        speed_zero_25x.onclick = () => {
-            if(speed_panel_alert_box_responsive.style.display == 'none') {
-                speed_panel_box.style.display = 'none';
-                speed_panel_alert_box_responsive.style.display = 'flex';
-                audio.playbackRate = 0.25;
-                speed_value_responsive.innerText = speed_zero_25x.innerText;
-                setTimeout(() => {
-                    speed_panel_alert_box_responsive.style.display = 'none';
-                }, 2000);
-            }
-        }
-        volume_btn.onclick = () => {
-            if(box_responsive.style.display == 'none') {
-                mute_box_responsive_btn.style.display = 'block';
-                volume_responsive_box.style.display = 'flex';
-                volume_panel_box.style.display = 'none';
-                embed_code_box_responsive_btn.style.display = 'none';
-                loop_box_responsive_btn.style.display = 'none';
-                box_responsive.style.display = 'flex';
-                black_screen_alpha.style.display = 'block';
-            } else {
-                box_responsive.style.display = 'none';
-                black_screen_alpha.style.display = 'none';
-            }
-        }
-        var mute_responsive_btn_text = document.getElementById('mute-responsive-btn-text');
-        var mute_box_responsive_icon = document.getElementById('mute-box-responsive-icon');
-        mute_box_responsive_btn.onclick = () => {
-            if(audio.volume != 0){
-                audio.volume = 0;
-                embed_code_box_responsive_btn.style.display = 'block';
-                loop_box_responsive_btn.style.display = 'block';
-                volume_range_responsive.value = 0;
-                volume_value_responsive.innerText = `${volume_range_responsive.value}%`;
-                box_responsive.style.display = 'none';
-                black_screen_alpha.style.display = 'none';
-                volume_btn.innerHTML = volume_mute_icon;
-                mute_box_responsive_icon.innerHTML = volume_unmute_icon;
-                mute_responsive_btn_text.innerText = 'Unmute';
-            } else {
-                audio.volume = 0.8;
-                volume_range_responsive.value = 80;
-                embed_code_box_responsive_btn.style.display = 'block';
-                loop_box_responsive_btn.style.display = 'block';
-                volume_value_responsive.innerText = `${volume_range_responsive.value}%`;
-                box_responsive.style.display = 'none';
-                black_screen_alpha.style.display = 'none';
-                volume_btn.innerHTML = volume_unmute_icon;
-                mute_box_responsive_icon.innerHTML = volume_mute_icon;
-                mute_responsive_btn_text.innerText = 'Mute';
-            }
-        }
-    }
-    }
-    
-    var mq = window.matchMedia("(max-width: 800px)");
-    Responsive(mq);
-    mq.addListener(Responsive);
-
 var textarea = document.getElementById('textarea');
 
-document.onmouseup = (e) => {
+function textAreaMouseUp(e) {
     textarea.classList.add('textarea-highlight');
     if(!textarea.contains(e.target)) {
         textarea.classList.remove('textarea-highlight');
     }
 }
 
+document.addEventListener("mouseup", textAreaMouseUp);
+
 var dislike_times = "0";
-var close_icon_dislike_response_box = document.getElementById('close-icon-dislike-response-box');
+var close_icon_dislike_response_box = document.getElementById('close-dislike-response-box');
 
 svg_dislike_btn.addEventListener('click', (e) => {
     e.preventDefault();
@@ -656,8 +559,11 @@ var response_box = document.getElementById('response-box');
 var maxCharacterCount = document.getElementById('maxCharacterCount');
 var maxCharacterNotify = document.getElementById('maxCharacterNotify');
 
+var dislike_form_submit = document.getElementById('dislike-form-submit');
+
 var max = 300;
-response_box.onkeyup = () => {
+
+function responseBoxKeyup () {
     if(response_box.innerText.length > max) {
         response_box.innerText = response_box.innerText.substring(0, max);
     } else {
@@ -675,12 +581,74 @@ response_box.onkeyup = () => {
 
     maxCharacterCount.innerText = `${response_box.innerText.length}/300`;
 }
+response_box.addEventListener("keyup", responseBoxKeyup);
 
-var dislike_form_submit = document.getElementById('dislike-form-submit');
-
-document.getElementById("dislike-form").addEventListener("keydown", (e) => {
-    if(e.ctrlKey && e.keyCode == 13) {
-        e.preventDefault();
-        dislike_form_submit.click();
+function onclickDislikeForm(){
+    dislike_response_box_wrapper.style.display = 'none';
+    black_screen_alpha.style.display = 'none';
+    response_box.innerText = '';
+    maxCharacterCount.innerText = '0/300';
+    if(notify_box.style.display == "none") {
+        notify_box.style.display = "flex";
+        notify_text_area.innerText = 'Feedback submitted.';
+        setTimeout(() => {
+            notify_box.style.display = "none";
+        }, 3000);
     }
-})
+}
+
+var learn_more = document.getElementById('learn-more');
+var radio = document.getElementById('radio');
+var radio2 = document.getElementById('radio2');
+var label1 = document.getElementById('label1');
+var label2 = document.getElementById('label2');
+
+
+document.onclick = () => {
+    
+    if(radio.checked) {
+        response_box.innerText = '';
+        maxCharacterCount.innerText = '0/300';
+        response_box.contentEditable = false;
+        response_box.style.cursor = 'not-allowed';
+        textarea.classList.add("textarea-disable");
+        document.removeEventListener("click", textAreaMouseUp);
+    } else if(radio2.checked){
+        response_box.innerText = '';
+        maxCharacterCount.innerText = '0/300';
+        response_box.contentEditable = false;
+        response_box.style.cursor = 'not-allowed';
+        textarea.classList.add("textarea-disable");
+        document.removeEventListener("click", textAreaMouseUp);
+    } else {
+        response_box.contentEditable = true;
+        response_box.style.cursor = 'text';
+        textarea.classList.remove("textarea-disable");
+        document.addEventListener("click", textAreaMouseUp);
+    }
+
+    if(radio.checked && radio2.checked) {
+        textarea.classList.add('textarea-highlight-maximum-characters-reached');
+        maxCharacterNotify.innerText = 'Only one option can be checked.';
+        dislike_form_submit.style.backgroundColor = '#fffac8';
+        dislike_form_submit.style.cursor = "not-allowed";
+        dislike_form_submit.removeEventListener("click", onclickDislikeForm);
+    } else {
+        textarea.classList.remove('textarea-highlight-maximum-characters-reached');
+        maxCharacterNotify.innerText = '';
+        dislike_form_submit.style.backgroundColor = '#ffc300';
+        dislike_form_submit.style.cursor = "pointer";
+        dislike_form_submit.addEventListener("click", onclickDislikeForm);
+        document.removeEventListener("click", textAreaMouseUp);
+    }
+}
+
+dislike_form_submit.onclick = () => {
+    if(radio.checked) {
+        console.log(`Feedback from User: ${label1.innerText}`);
+    } else if (radio2.checked) {
+        console.log(`Feedback from User: ${label2.innerText}`);
+    } else if (response_box.innerText.length != 0){
+        console.log(`Feedback from User: ${response_box.innerText}`);
+    }
+}
