@@ -42,6 +42,18 @@
                         <div class="inside-selection" onclick="window.location='chill-music.html';">
                             <p>chill music</p>
                         </div>
+                        <div style="margin: 0 10px 10px 10px;">
+                            <div class="profile-box-1" id="profile-box-header">
+                                <img src="./img/profile.jpg" class="profile-img profile-margin" id="profile-img-in-profile-box-responsive" alt="profile" width="30px" height="30px">
+                                <div class="profile-box-1-i">
+                                    <p class="profile-name" id="profile-name-responsive">KTWebsite</p>
+                                    <p class="profile-id" id="profile-id-responsive" style="display: none;">ktwebsite</p>
+                                </div>
+                            </div>
+                            <button class="profile-box-button color-red" id="sign-out">
+                                <p>Sign out</p>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -80,28 +92,46 @@
                             </div>
                         </form>
                     </div>
-                    <div class="search-icon" id="search">
-                        <button style="background-color: transparent;">
-                            <svg viewBox="0 0 24 24" width="40" height="40">
-                                <path d="M20.87,20.17l-5.59-5.59C16.35,13.35,17,11.75,17,10c0-3.87-3.13-7-7-7s-7,3.13-7,7s3.13,7,7,7c1.75,0,3.35-0.65,4.58-1.71 l5.59,5.59L20.87,20.17z M10,16c-3.31,0-6-2.69-6-6s2.69-6,6-6s6,2.69,6,6S13.31,16,10,16z"></path>
-                            </svg>
-                        </button>
+                    <div style="display: flex;">
+                        <div class="img-profile" id="profile-img-box">
+                            <img src="./img/profile.jpg" class="profile-img" id="profile" alt="profile" width="40px" height="40px">
+                                        
+                            <div class="profile-box" id="profile-box" style="display: none;">
+                                <div class="profile-box-1" id="profile-box-header">
+                                    <img src="./img/profile.jpg" class="profile-img profile-margin" id="profile-img-in-profile-box" alt="profile" width="30px" height="30px">
+                                    <div class="profile-box-1-i">
+                                        <p class="profile-name" id="profile-name">KTWebsite</p>
+                                        <p class="profile-id" id="profile-id" style="display: none;">ktwebsite</p>
+                                    </div>
+                                </div>
+                                <button class="profile-box-button color-black" id="sign-up">
+                                    <p>Sign Up</p>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="search-icon" id="search">
+                            <button style="background-color: transparent;">
+                                <svg viewBox="0 0 24 24" width="40" height="40">
+                                    <path d="M20.87,20.17l-5.59-5.59C16.35,13.35,17,11.75,17,10c0-3.87-3.13-7-7-7s-7,3.13-7,7s3.13,7,7,7c1.75,0,3.35-0.65,4.58-1.71 l5.59,5.59L20.87,20.17z M10,16c-3.31,0-6-2.69-6-6s2.69-6,6-6s6,2.69,6,6S13.31,16,10,16z"></path>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </nav>
             <div class="content content-background" id="content">
                 <!-- Content goes here -->
                 <div class="introduce">
-                    <p id="title">Welcome to KTWebsite+</p>
-                    <p id="description">Viper than KTWebsite.</p>
+                    <span class="title">Welcome to KTWebsite+</span><span class="title" id="user"></span> 
+                    <p class="description">Viper than KTWebsite.</p>
                     <a href="../home.html">
                         <button class="button_goback">Go back to KTWebsite</button>
                     </a>
                 </div>
                 <div class="ktmuzik">
                     <div>
-                        <p id="title">KTMuZik</p>
-                        <p id="description">Enjoy thousands of non-famous music now.</p>
+                        <p class="title">KTMuZik</p>
+                        <p class="description">Enjoy thousands of non-famous music now.</p>
                         <a href="./ktmuzik.html">
                             <button class="button_tryit">Try it now</button>
                         </a>
@@ -110,8 +140,8 @@
                 </div>
                 <div class="ktmuzik-plus">
                     <div>
-                        <p id="title">KTMuZik+</p>
-                        <p id="description">Enjoy thousands of famous music now.</p>
+                        <p class="title">KTMuZik+</p>
+                        <p class="description">Enjoy thousands of famous music now.</p>
                         <a href="./ktmuzik-plus.html">
                             <button class="button_tryit">Try it now</button>
                         </a>
@@ -120,8 +150,8 @@
                 </div>
                 <div class="ktfilm">
                     <div>
-                        <p id="title">KTFilm</p>
-                        <p id="description">Enjoy thousands of movies by Khang Tèo.</p>
+                        <p class="title">KTFilm</p>
+                        <p class="description">Enjoy thousands of movies by Khang Tèo.</p>
                         <a href="./ktfilm.html">
                             <button class="button_tryit">Try it now</button>
                         </a>
@@ -130,8 +160,8 @@
                 </div>
                 <div class="chill-music">
                     <div>
-                        <p id="title">chill music</p>
-                        <p id="description">Stay back and start chill with some chill music.</p>
+                        <p class="title">chill music</p>
+                        <p class="description">Stay back and start chill with some chill music.</p>
                         <a href="./chill-music.html">
                             <button class="button_tryit">Try it now</button>
                         </a>

@@ -7,14 +7,32 @@
 .introduce{
     padding: 50px;
     color: white;
+    position: relative;
+    animation: showUp 1s;
 }
 
-p#title{
+@keyframes showUp{
+    0%{
+        opacity: 0;
+        right: 30px;
+    }
+    100%{
+        opacity: 1;
+        right: 0;
+    }
+}
+
+span.title{
     font-size: 50px;
     font-family: "Whitney Bold";
 }
 
-p#description{
+p.title{
+    font-size: 50px;
+    font-family: "Whitney Bold";
+}
+
+p.description{
     margin-top: 15px;
     font-size: 20px;
     font-family: "Whitney";
@@ -42,6 +60,7 @@ p#description{
     padding: 50px;
     color: white;
     justify-content: space-between;
+    position: relative;
 }
 
 .button_tryit{

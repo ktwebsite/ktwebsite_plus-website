@@ -53,13 +53,20 @@ function currentTime() {
     time_duration.innerHTML = durmins + ":" + dursecs;
 }
 
-if(time_duration == "NaN:NaN") {
+audio.addEventListener("error", () => {
     play_pause_btn.style.fill = 'rgb(156, 156, 156)';
     console.error("There was an error with the audio.");
-    notify_box.style.display = 'block';
-    notify_text_area.innerText = "There was an error with the audio.";
+    play_pause_btn.innerHTML = pause_btn;
     play_pause_btn.removeEventListener("click", playPauseBtnClick);
-}
+    play_pause_btn.style.cursor = 'default';
+    notify_box.style.display = 'flex';
+    notify_text_area.innerText = "There was an error with the audio.";
+    learn_more.style.display = 'block';
+    setTimeout(() => {
+        notify_box.style.display = 'none';
+        learn_more.style.display = 'none';
+    }, 5000);
+})
 
 var notify_box = document.getElementById('notify-box');
 
@@ -70,7 +77,8 @@ play_pause_btn.innerHTML = pause_btn;
 }
 
 document.addEventListener("keydown", event => {
-    if(event.ctrlKey && event.keyCode === 32) {
+    // play and pause
+    if(event.ctrlKey && event.shiftKey && event.keyCode === 32) {
         if (play_pause_btn.innerHTML == play_btn) {
             play_pause_btn.innerHTML = pause_btn;
             audio.pause();
@@ -165,7 +173,8 @@ if(speed_panel_alert_box.style.display == 'none') {
 }
 
 document.addEventListener("keydown", event => {
-    if(event.ctrlKey && event.keyCode == 27) {
+    // disable speed panel
+    if(event.ctrlKey && event.shiftKey && event.keyCode == 27) {
         speed_panel_box.style.display = 'none';
     }
 });
@@ -203,7 +212,8 @@ var volume_value = document.getElementById('volume-value');
 var volume_slider = document.getElementById('volume-slider');
 
 document.addEventListener("keydown", event => {
-    if (event.ctrlKey && event.keyCode === 27) {
+    // disable volume panel
+    if (event.ctrlKey && event.shiftKey && event.keyCode === 27) {
         volume_panel_box.style.display = 'none';
         volume_oncontextmenu_box.style.display = 'none';
     }
@@ -251,7 +261,8 @@ mute.onclick = () => {
 }
 
 document.addEventListener("keydown", event => {
-    if (event.ctrlKey && event.keyCode === 77) {
+    // adjust volume
+    if (event.ctrlKey && event.shiftKey && event.keyCode === 77) {
         if(audio.volume != 0) {
             audio.volume = 0;
             volume_oncontextmenu_box.style.display = 'none';
@@ -276,7 +287,8 @@ var loop = document.getElementById('loop');
 var true_false = document.getElementById('true-false');
 
 document.addEventListener("keydown", event => {
-    if(event.ctrlKey && event.keyCode === 76){
+    // loop
+    if(event.ctrlKey && event.shiftKey && event.keyCode === 76){
         if(audio.loop == false){
             audio.loop = true;
             loop.style.display = 'block';
@@ -373,7 +385,8 @@ var black_screen_alpha = document.getElementById('black-screen-alpha');
 var embed_code_copy_box = document.getElementById('embed-code-copy-box-wrapper');
 
 document.addEventListener("keydown", event => {
-    if(event.ctrlKey && event.keyCode === 69){
+    // embed code box
+    if(event.ctrlKey && event.shiftKey && event.keyCode === 69){
         if(black_screen_alpha.style.display == 'none' && embed_code_copy_box.style.display == 'none') {
             black_screen_alpha.style.display = 'block';
             embed_code_copy_box.style.display = 'flex';
@@ -409,7 +422,8 @@ embed_copy_btn.onclick = () => {
 }
 
 document.addEventListener("keydown", event => {
-    if(event.ctrlKey && event.keyCode === 27){
+    // embed code box disable
+    if(event.ctrlKey && event.shiftKey && event.keyCode === 27){
         black_screen_alpha.style.display = 'none';
         embed_code_copy_box.style.display = 'none';
     }
@@ -645,10 +659,10 @@ document.onclick = () => {
 
 dislike_form_submit.onclick = () => {
     if(radio.checked) {
-        console.log(`Feedback from User: ${label1.innerText}`);
+        console.log(`Feedback from User: \n${label1.innerText}`);
     } else if (radio2.checked) {
-        console.log(`Feedback from User: ${label2.innerText}`);
+        console.log(`Feedback from User: \n${label2.innerText}`);
     } else if (response_box.innerText.length != 0){
-        console.log(`Feedback from User: ${response_box.innerText}`);
+        console.log(`Feedback from User: \n${response_box.innerText}`);
     }
 }
