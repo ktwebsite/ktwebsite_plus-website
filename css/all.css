@@ -1,19 +1,19 @@
 @font-face {
     font-family: "Whitney Bold";
-    src: url('/fonts/whitneybold-webfont.woff2') format('woff2'),
-         url('/fonts/whitneybold-webfont.woff') format('woff');
+    src: url('../fonts/whitneybold-webfont.woff2') format('woff2'),
+         url('../fonts/whitneybold-webfont.woff') format('woff');
 }
 
 @font-face {
     font-family: "Whitney";
-    src: url('/fonts/whitney_medium-webfont.woff') format('woff'),
+    src: url('../fonts/whitney_medium-webfont.woff') format('woff'),
          url('/fonts/whitney_medium-webfont.woff2') format('woff2');
 }
 
 @font-face {
     font-family: "Menlo";
-    src: url('/fonts/menlo-regular-webfont.woff') format('woff'),
-            url('/fonts/menlo-regular-webfont.woff2') format('woff2');
+    src: url('../fonts/menlo-regular-webfont.woff') format('woff'),
+            url('../fonts/menlo-regular-webfont.woff2') format('woff2');
 }
 
 #page{
