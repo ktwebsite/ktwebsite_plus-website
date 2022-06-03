@@ -48,4 +48,8 @@ body {
         flex-direction: column;
         align-items: center;
     }
+    .page-title{
+        align-items: center;
+        text-align: center;
+    }
 }
