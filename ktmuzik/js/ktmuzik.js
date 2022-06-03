@@ -437,16 +437,11 @@ var volume_range_responsive = document.getElementById('volume-range-responsive')
 var dislike_response_box_wrapper = document.getElementById('dislike-response-box-wrapper');
 
 icon_box_responsive.onclick = () => {
-    if(box_responsive.style.display == 'none') {
-        mute_box_responsive_btn.style.display = 'none';
-        volume_responsive_box.style.display = 'none';
-        dislike_response_box_wrapper.style.display = "none";
-        black_screen_alpha.style.display = 'block';
-        box_responsive.style.display = 'flex';
-    } else {
-        black_screen_alpha.style.display = 'none';
-        box_responsive.style.display = 'none';
-    }
+    mute_box_responsive_btn.style.display = 'none';
+    volume_responsive_box.style.display = 'none';
+    black_screen_alpha.style.display = 'block';
+    box_responsive.style.display = 'flex';
+    dislike_response_box_wrapper.style.display = "none";
 }
 
 var embed_code_box_responsive_btn = document.getElementById('embed-code-box-responsive-btn');

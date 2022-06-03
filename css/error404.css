@@ -42,3 +42,10 @@ body {
     background-color: #ffc300;
     color: black;
 }
+
+@media screen and (max-width: 800px){
+    .page-inside{
+        flex-direction: column;
+        align-items: center;
+    }
+}
