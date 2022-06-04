@@ -36,6 +36,7 @@ a:hover{
 
 input{
     border: none;
+    background: transparent;
 }
 
 button{

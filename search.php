@@ -12,7 +12,6 @@
     </noscript>
     <link rel="stylesheet" type="text/css" href="./css/all.css">
     <link rel="stylesheet" type="text/css" href="./css/home.css">
-    <link rel="stylesheet" type="text/css" href="./css/theme/dark.css">
 </head>
 <body id="body">
     <div id="page">
@@ -121,53 +120,8 @@
             <div class="content content-background" id="content">
                 <!-- Content goes here -->
                 <div class="introduce">
-                    <span class="title">Welcome to KTWebsite+</span><span class="title" id="user"></span> 
-                    <p class="description">Viper than KTWebsite.</p>
-                    <a href="../home.html">
-                        <button class="button_goback">Go back to KTWebsite</button>
-                    </a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi odit, minus sunt, consequuntur, veniam voluptatum dolor accusantium molestias eum neque porro! Veritatis architecto accusantium recusandae nam corporis expedita! Odit, ex?</p>
                 </div>
-                <div class="ktmuzik">
-                    <div>
-                        <p class="title">KTMuZik</p>
-                        <p class="description">Enjoy thousands of non-famous music now.</p>
-                        <a href="./ktmuzik.html">
-                            <button class="button_tryit">Try it now</button>
-                        </a>
-                    </div>
-                    <img class="img" alt="KTMuZik" src="./img/ktmuzik.JPG" height="150" width="150">
-                </div>
-                <div class="ktmuzik-plus">
-                    <div>
-                        <p class="title">KTMuZik+</p>
-                        <p class="description">Enjoy thousands of famous music now.</p>
-                        <a href="./ktmuzik-plus.html">
-                            <button class="button_tryit">Try it now</button>
-                        </a>
-                    </div>
-                    <img class="img" alt="KTMuZik" src="./img/ktmuzik_plus.JPG" height="150" width="150">
-                </div>
-                <div class="ktfilm">
-                    <div>
-                        <p class="title">KTFilm</p>
-                        <p class="description">Enjoy thousands of movies by Khang Tèo.</p>
-                        <a href="./ktfilm.html">
-                            <button class="button_tryit">Try it now</button>
-                        </a>
-                    </div>
-                    <img class="img" alt="KTFilm" src="./img/ktfilm.JPG" height="150" width="150">
-                </div>
-                <div class="chill-music">
-                    <div>
-                        <p class="title">chill music</p>
-                        <p class="description">Stay back and start chill with some chill music.</p>
-                        <a href="./chill-music.html">
-                            <button class="button_tryit">Try it now</button>
-                        </a>
-                    </div>
-                    <img class="img" alt="KTFilm" src="./img/chill_music.JPG" height="150" width="150">
-                </div>
-                <!-- end -->
                 <!-- Footer -->
                 <div class="footer">
                     <div class="footer-inside">

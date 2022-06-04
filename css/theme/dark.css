@@ -1,5 +1,22 @@
-.Header-dark{
+/* All */
+
+a{
+    color: #fff !important;
+}
+
+input{
+    color: #fff;
+}
+
+.Header{
     background-color: #1a1a1a;
     color: #fff;
     fill: #fff;
 }
+
+.footer{
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* */
