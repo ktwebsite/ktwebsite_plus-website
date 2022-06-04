@@ -56,6 +56,11 @@ function Responsive (mq) {
             }
         }
         volume_btn.onclick = () => {
+            if(navigator.userAgent.indexOf('iPhone') > 0 || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('iPad') > 0){
+                notify_text_area.style.display = "block";
+                notify_text_area.innerText = "Please note that on iOS devices, the audio level is always under the user’s physical control. The volume property is not settable in JavaScript.";
+                console.log("iOS");
+            }
             if(box_responsive.style.display == 'none') {
                 mute_box_responsive_btn.style.display = 'block';
                 volume_responsive_box.style.display = 'flex';
@@ -94,15 +99,6 @@ function Responsive (mq) {
                 volume_btn.innerHTML = volume_unmute_icon;
                 mute_box_responsive_icon.innerHTML = volume_mute_icon;
                 mute_responsive_btn_text.innerText = 'Mute';
-            }
-        }
-
-        var volume_box_responsive_notice = document.getElementById('volume-box-responsive-notice');
-        const userAgent = () => {
-            if(/iP(hone|od|ad)/.test(navigator.userAgent)) {
-                volume_box_responsive_notice.style.display = 'block';
-            } else {
-                volume_box_responsive_notice.style.display = 'none';
             }
         }
     }
