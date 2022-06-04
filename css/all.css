@@ -49,6 +49,10 @@ code {
     font-size: 12px;
 }
 
+svg{
+    background-color: transparent;
+}
+
 .black-screen-alpha{
     position: fixed;
     top: 0;

@@ -97,14 +97,12 @@ function Responsive (mq) {
             }
         }
 
-        var volume_box_responsive = document.getElementById('volume-box-responsive');
+        var volume_box_responsive_notice = document.getElementById('volume-box-responsive-notice');
         const userAgent = () => {
             if(/iP(hone|od|ad)/.test(navigator.userAgent)) {
-                // make a new element for volume_box_responsive
-                var volume_box_responsive_notice = document.createElement('div');
-                volume_box_responsive_notice.className = 'volume-box-responsive-new';
-                volume_box_responsive_notice.innerHTML = '<p>Please note that on iOS devices, the audio level is always under the user’s physical control. The volume property is not settable in JavaScript.</p>';
-                volume_box_responsive.appendChild(volume_box_responsive_notice);
+                volume_box_responsive_notice.style.display = 'block';
+            } else {
+                volume_box_responsive_notice.style.display = 'none';
             }
         }
     }
