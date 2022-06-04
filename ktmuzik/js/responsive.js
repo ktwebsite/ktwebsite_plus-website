@@ -55,10 +55,11 @@ function Responsive (mq) {
                 }, 2000);
             }
         }
+
+        var volume_box_responsive_notice = document.getElementById('volume-box-responsive-notice');
         volume_btn.onclick = () => {
             if(navigator.userAgent.indexOf('iPhone') > 0 || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('iPad') > 0){
-                notify_text_area.style.display = "block";
-                notify_text_area.innerText = "Please note that on iOS devices, the audio level is always under the user’s physical control. The volume property is not settable in JavaScript.";
+                volume_box_responsive_notice.style.display = "block";
                 console.log("iOS");
             }
             if(box_responsive.style.display == 'none') {
