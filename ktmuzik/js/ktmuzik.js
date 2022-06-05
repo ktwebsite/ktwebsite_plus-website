@@ -483,6 +483,7 @@ close_icon_box_responsive.onclick = () => {
     embed_code_box_responsive_btn.style.display = 'block';
     loop_box_responsive_btn.style.display = 'block';
     black_screen_alpha.style.display = 'none';
+    volume_box_responsive_notice.style.display = "none";
 }
 
 var alert_panel_box_responsive_wrapper = document.getElementById('alert-panel-box-responsive-wrapper');

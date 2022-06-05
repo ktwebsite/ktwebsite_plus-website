@@ -75,6 +75,16 @@ function Responsive (mq) {
                 black_screen_alpha.style.display = 'none';
             }
         }
+        
+        close_icon_box_responsive.onclick = () => {
+            box_responsive.style.display = 'none';
+            embed_code_copy_box_responsive.style.display = 'none';
+            embed_code_box_responsive_btn.style.display = 'block';
+            loop_box_responsive_btn.style.display = 'block';
+            black_screen_alpha.style.display = 'none';
+            volume_box_responsive_notice.style.display = "none";
+        }
+        
         var mute_responsive_btn_text = document.getElementById('mute-responsive-btn-text');
         var mute_box_responsive_icon = document.getElementById('mute-box-responsive-icon');
         mute_box_responsive_btn.onclick = () => {
