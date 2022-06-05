@@ -282,15 +282,18 @@
     text-align: center;
     font-family: Whitney;
     font-size: 13px;
+    color: black;
 }
 
 .view-item-responsive{
     display: none;
+    background-color: transparent;
 }
 
 .view-item{
     display: block;
     margin-left: 10px;
+    background-color: transparent;
 }
 
 /** Responsive page **/
@@ -305,18 +308,21 @@
     .music-box-2{
         align-items: center;
     }
-    .speed-panel-alert-box-responsive{
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 100;
+    .speed-panel-alert-box-responsive-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin: 5px;
+    }
+    .speed-panel-alert-box-responsive{
+        z-index: 100;
         padding: 10px 20px;
         background-color: #fff7b3;
         border: 1.5px solid #ffc300;
         border-radius: 5px;
         text-align: center;
         font-size: 13px;
+        color: black;
     }
 
     .view-item {

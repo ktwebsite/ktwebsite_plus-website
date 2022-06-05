@@ -179,6 +179,7 @@
     text-align: center;
     font-family: Whitney;
     font-size: 13px;
+    color: black;
 }
 
 .black-screen-alpha{
@@ -565,6 +566,7 @@ input[type="radio"]{
 
 .speed-panel-alert-box{
     width: 100%;
+    color: black;
 }
 
 .volume-panel-box{
@@ -733,6 +735,7 @@ input[type="radio"]{
     border-radius: 5px;
     text-align: center;
     font-size: 13px;
+    color: black;
 }
 
 @media screen and (max-width: 800px){
@@ -750,6 +753,7 @@ input[type="radio"]{
         border-radius: 5px;
         text-align: center;
         font-size: 13px;
+        color: black;
     }
     .loop-box-responsive-btn-clicked{
         background-color: #505050;

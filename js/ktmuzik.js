@@ -180,7 +180,7 @@ speed_zero_25x.onclick = () => {
 
 /** Responsive Page */
 
-const speed_panel_alert_box_responsive = document.getElementById('speed-panel-alert-box-responsive');
+const speed_panel_alert_box_responsive = document.getElementById('speed-panel-alert-box-responsive-wrapper');
 
 const speed_value_responsive = document.getElementById('speed-value-responsive');
 
@@ -189,7 +189,7 @@ function speed (mq) {
         speed_2x.onclick = () => {
             if(speed_panel_alert_box_responsive.style.display == 'none') {
                 speed_panel_box.style.display = 'none';
-                speed_panel_alert_box_responsive.style.display = 'block';
+                speed_panel_alert_box_responsive.style.display = 'flex';
                 audio.playbackRate = 2;
                 speed_value_responsive.innerText = speed_2x.innerText;
                 setTimeout(() => {
@@ -200,7 +200,7 @@ function speed (mq) {
         speed_1_half.onclick = () => {
             if(speed_panel_alert_box_responsive.style.display == 'none') {
                 speed_panel_box.style.display = 'none';
-                speed_panel_alert_box_responsive.style.display = 'block';
+                speed_panel_alert_box_responsive.style.display = 'flex';
                 audio.playbackRate = 1.5;
                 speed_value_responsive.innerText = speed_1_half.innerText;
                 setTimeout(() => {
@@ -211,7 +211,7 @@ function speed (mq) {
         speed_1x.onclick = () => {
             if(speed_panel_alert_box_responsive.style.display == 'none') {
                 speed_panel_box.style.display = 'none';
-                speed_panel_alert_box_responsive.style.display = 'block';
+                speed_panel_alert_box_responsive.style.display = 'flex';
                 audio.playbackRate = 1;
                 speed_value_responsive.innerText = speed_1x.innerText;
                 setTimeout(() => {
@@ -222,7 +222,7 @@ function speed (mq) {
         speed_zero_half.onclick = () => {
             if(speed_panel_alert_box_responsive.style.display == 'none') {
                 speed_panel_box.style.display = 'none';
-                speed_panel_alert_box_responsive.style.display = 'block';
+                speed_panel_alert_box_responsive.style.display = 'flex';
                 audio.playbackRate = 0.5;
                 speed_value_responsive.innerText = speed_zero_half.innerText;
                 setTimeout(() => {
@@ -233,7 +233,7 @@ function speed (mq) {
         speed_zero_25x.onclick = () => {
             if(speed_panel_alert_box_responsive.style.display == 'none') {
                 speed_panel_box.style.display = 'none';
-                speed_panel_alert_box_responsive.style.display = 'block';
+                speed_panel_alert_box_responsive.style.display = 'flex';
                 audio.playbackRate = 0.25;
                 speed_value_responsive.innerText = speed_zero_25x.innerText;
                 setTimeout(() => {
