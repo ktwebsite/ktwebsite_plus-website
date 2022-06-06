@@ -20,4 +20,5 @@ search.onclick = () => {
 close_btn.onclick = () => {
     profile.style.display = 'block';
     search_box.style.display = 'none';
+    document.querySelector("#search_input_box").value = '';
 }

@@ -14,6 +14,7 @@ function Responsive (mq) {
         
         close_btn.onclick = () => {
             search_box.style.display = 'none';
+            document.querySelector("#search_input_box").value = '';
         }
     }
 }

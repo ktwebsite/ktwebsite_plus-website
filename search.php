@@ -83,7 +83,7 @@
                     <div class="search-box" id="search-box" style="display: none;">
                         <form action="./search.php" class="form" method="get">
                             <div class="input-search">
-                                <input type="text" placeholder="Search..." style="font-family: Whitney; outline: none;"name="search" id="search_input_box" required>
+                                <input type="text" placeholder="Search..." style="font-family: Whitney; outline: none;"name="search" id="search_input_box">
                                 <svg viewBox="0 0 24 24" width="20" height="20" id="close_btn" style="cursor: pointer;">
                                     <path d="M12.7,12l6.6,6.6l-0.7,0.7L12,12.7l-6.6,6.6l-0.7-0.7l6.6-6.6L4.6,5.4l0.7-0.7l6.6,6.6l6.6-6.6l0.7,0.7L12.7,12z"></path>
                                 </svg>

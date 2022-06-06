@@ -569,6 +569,12 @@ var response_box = document.getElementById('response-box');
 var maxCharacterCount = document.getElementById('maxCharacterCount');
 var maxCharacterNotify = document.getElementById('maxCharacterNotify');
 
+response_box.addEventListener('paste', function (e) {
+  e.preventDefault()
+  var text = e.clipboardData.getData('text/plain')
+  document.execCommand('insertText', false, text)
+});
+
 var dislike_form_submit = document.getElementById('dislike-form-submit');
 
 var max = 300;
