@@ -1,0 +1,55 @@
+/* All */
+
+a{
+    color: #000 !important;
+}
+
+input{
+    color: #000;
+}
+
+.Header,.footer,.music-box,.speed-panel-box,.Selection-box-responsive{
+    background-color: #ffffff;
+    color: #000;
+    fill: #000;
+}
+
+.volume-panel-box,.box-responsive,.dislike-response-box{
+    background-color: #ffffff;
+    color: #000;
+    fill: #000;
+}
+.content{
+    color: #000;
+    fill: #000;
+}
+.content-background{
+    background-color: #ffffff;
+}
+.seekslider::-webkit-slider-thumb,.volume-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #000;
+    cursor: pointer;
+}
+
+.seekslider::-moz-range-thumb,.volume-range::-moz-range-thumb {
+    width: 14px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #000;
+    cursor: pointer;
+}
+
+[type="checkbox"]{
+    background-color: #ffffff;
+}
+
+.profile-name{
+    color: black;
+}
+
+/* */

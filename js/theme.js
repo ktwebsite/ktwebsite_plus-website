@@ -1,13 +1,23 @@
 function userAgentTheme(scheme){
     switch(scheme){
         case "dark":
-            // dark theme
+            var linkElement = document.createElement('link');
+            linkElement.rel = 'stylesheet';
+            linkElement.href = './css/theme/dark.css';
+            document.head.appendChild(linkElement);
             break;
         case "light":
-            // light theme
+            document.head.removeChild(linkElement);
+            var linkElement = document.createElement('link');
+            linkElement.rel = 'stylesheet';
+            linkElement.href = './css/theme/light.css';
+            document.head.appendChild(linkElement);
             break;
         default:
-            // default theme
+            var linkElement = document.createElement('link');
+            linkElement.rel = 'stylesheet';
+            linkElement.href = './css/theme/light.css';
+            document.head.appendChild(linkElement);
             break;
     }
 }
@@ -25,5 +35,5 @@ function getPreferredColorScheme() {
   
   if(window.matchMedia){
     var colorSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    colorSchemeQuery.addEventListener('change', setColorScheme(getPreferredColorScheme()));
+    colorSchemeQuery.addEventListener('change', userAgentTheme(getPreferredColorScheme()));
   }
