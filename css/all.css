@@ -33,7 +33,12 @@
 
 h1,h2,h3,h4,h5,h6,p,span,li,a,button,input,textarea,label,select,option,form{
     margin: 0;
-    font-family: "Whitney", "Whitney Bold", Arial, Helvetica, sans-serif;
+    font-family: "Whitney Bold", Arial, Helvetica, sans-serif;
+}
+
+p,span,li,a,button,input,textarea,label,select,option,form{
+    margin: 0;
+    font-family: "Whitney", Arial, Helvetica, sans-serif;
 }
 
 a{
@@ -230,7 +235,6 @@ svg{
 
 .input-search{
     background-color: transparent;
-    width: 100%;
     padding: 10px;
     display: flex;
     transition: width ease 0.2s, opacity ease 0.4s;

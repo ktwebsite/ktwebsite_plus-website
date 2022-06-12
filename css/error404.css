@@ -1,3 +1,7 @@
+#page{
+    margin: 15px;
+}
+
 body {
     margin: 0;
 }
@@ -51,5 +55,9 @@ body {
     .page-title{
         align-items: center;
         text-align: center;
+        max-width: min-content;
+    }
+    .page-text-title{
+        font-size: 20px;
     }
 }
