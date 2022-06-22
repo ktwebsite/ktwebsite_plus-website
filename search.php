@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="./css/home.css">
     <link rel="stylesheet" type="text/css" href="./css/search.css">
 </head>
-<body id="body">nm
+<body id="body">
     Redirecting...
 </body>
 </html>
