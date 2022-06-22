@@ -11,4 +11,4 @@ Twitter: @ktwebsite
 ## License
 Copyright (c) KTWebsite 2019-2022. All rights reserved.
 
-License under the [MIT License](LICENSE.txt)
+License under the [MIT License](LICENSE)
