@@ -602,6 +602,11 @@ input[type="radio"]{
 .volume-value{
     padding-left: 10px;
     display: flex;
+    flex-direction: column;
+}
+
+.volume-box-inner{
+    display: flex;
 }
 
 @keyframes appear {
@@ -630,7 +635,7 @@ input[type="radio"]{
     cursor: pointer;
 }
 
-.volume-value > p{
+.volume-box-inner > p{
     margin-right: 7px;
     margin-block-start: auto;
     margin-block-end: auto;
@@ -728,7 +733,7 @@ input[type="radio"]{
     cursor: pointer;
 }
 
-.volume-box-responsive-notice{
+.volume-box-notice, .volume-box-responsive-notice{
     padding: 10px 20px;
     background-color: #fff7b3;
     border: 1.5px solid #ffc300;
@@ -736,6 +741,10 @@ input[type="radio"]{
     text-align: center;
     font-size: 13px;
     color: black;
+}
+
+.volume-box-notice{
+    width: 145px;
 }
 
 @media screen and (max-width: 800px){

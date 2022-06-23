@@ -199,12 +199,20 @@ volume_btn.oncontextmenu = () => {
     }
 }
 
+var volume_box_notice = document.getElementById('volume-box-notice');
+var volume_box_inner = document.getElementById('volume-box-inner');
+
 volume_btn.onclick = () => {
     if(volume_panel_box.style.display == 'none') {
         volume_panel_box.style.display = 'block';
         volume_oncontextmenu_box.style.display = 'none';
     } else {
         volume_panel_box.style.display = 'none';
+    }
+    if(navigator.userAgent.indexOf('iPhone') > 0 || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('iPad') > 0){
+        volume_box_notice.style.display = "block";
+        console.log("iOS");
+        volume_box_inner.style.marginBottom = "10px";
     }
 }
 
